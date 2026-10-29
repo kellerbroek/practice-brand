@@ -1,20 +1,276 @@
 
-/* ===========================
-   TYPOGRAPHY FONT TESTER
-   =========================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-const fontInput = document.getElementById("font-input");
+  <title>Typography.exe | Bite Me</title>
 
-if (fontInput) {
-  const display = document.getElementById("preview-display");
-  const digital = document.getElementById("preview-digital");
-  const body = document.getElementById("preview-body");
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-  fontInput.addEventListener("input", () => {
-    const text = fontInput.value;
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 
-    display.textContent = text;
-    digital.textContent = text;
-    body.textContent = text;
-  });
-}
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="brand-page typography-page">
+
+  <header class="brand-nav">
+    <a href="index.html" class="nav-logo">
+      ♡ BITE ME.exe
+    </a>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="colors.html">COLORS</a>
+      <a href="typography.html">TYPE</a>
+      <a href="visuals.html">VISUALS</a>
+      <a href="applications.html">APPLICATIONS</a>
+    </nav>
+  </header>
+
+  <main class="brand-container">
+
+    <p class="file-label">
+      FILE_003 / VISUAL IDENTITY
+    </p>
+
+    <h1 class="brand-heading">
+      TYPE<span>.exe</span>
+    </h1>
+
+    <p class="brand-subtitle">
+      Romantic. Rebellious. Digitally distorted.
+    </p>
+
+    <!-- PRIMARY TYPEFACE -->
+
+    <section class="brand-window">
+      <div class="brand-window-bar">
+        <span>♡ primary_font.exe</span>
+        <span>□ ×</span>
+      </div>
+
+      <div class="type-section">
+
+        <p class="type-label">
+          01 / PRIMARY DISPLAY TYPEFACE
+        </p>
+
+        <h2 class="type-display">
+          Bite Me Forever.
+        </h2>
+
+        <p class="type-description">
+          CORMORANT GARAMOND / BOLD ITALIC
+        </p>
+
+        <p>
+          Romantic, dramatic, and editorial.
+          Used for large statements, collection
+          titles, and expressive headlines.
+        </p>
+
+        <div class="type-alphabet display-alphabet">
+          ABCDEFGHIJKLM
+          NOPQRSTUVWXYZ
+          abcdefghijklm
+          nopqrstuvwxyz
+          0123456789
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECONDARY TYPEFACE -->
+
+    <section class="brand-window">
+      <div class="brand-window-bar">
+        <span>♡ digital_font.exe</span>
+        <span>□ ×</span>
+      </div>
+
+      <div class="type-section">
+
+        <p class="type-label">
+          02 / SECONDARY DIGITAL TYPEFACE
+        </p>
+
+        <h2 class="type-digital">
+          BITE_ME.EXE
+        </h2>
+
+        <p class="type-description">
+          SPACE MONO / BOLD
+        </p>
+
+        <p>
+          Inspired by early internet interfaces,
+          computer file names, and digital culture.
+          Used for navigation, labels, and buttons.
+        </p>
+
+        <div class="type-alphabet digital-alphabet">
+          ABCDEFGHIJKLM
+          NOPQRSTUVWXYZ
+          abcdefghijklm
+          nopqrstuvwxyz
+          0123456789
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BODY TYPEFACE -->
+
+    <section class="brand-window">
+      <div class="brand-window-bar">
+        <span>♡ body_font.txt</span>
+        <span>□ ×</span>
+      </div>
+
+      <div class="type-section">
+
+        <p class="type-label">
+          03 / BODY TYPEFACE
+        </p>
+
+        <h2 class="type-body-heading">
+          Made to stand out.
+        </h2>
+
+        <p class="type-description">
+          DM SANS / REGULAR
+        </p>
+
+        <p class="type-body-example">
+          Bite Me is an independent jewelry
+          brand that celebrates individuality,
+          experimentation, and self-expression.
+          Our visual identity brings together
+          gothic romance, Y2K nostalgia, and
+          contemporary alternative fashion.
+        </p>
+
+        <div class="type-alphabet body-alphabet">
+          ABCDEFGHIJKLM
+          NOPQRSTUVWXYZ
+          abcdefghijklm
+          nopqrstuvwxyz
+          0123456789
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FONT TESTER -->
+
+    <section class="brand-window">
+      <div class="brand-window-bar">
+        <span>♡ font_tester.exe</span>
+        <span>□ ×</span>
+      </div>
+
+      <div class="type-section">
+
+        <h2 class="tester-title">
+          TRY THE TYPEFACES ♡
+        </h2>
+
+        <p>
+          Type something below to preview
+          Bite Me's typography system.
+        </p>
+
+        <label for="font-input" class="type-label">
+          ENTER TEXT:
+        </label>
+
+        <input
+          type="text"
+          id="font-input"
+          class="font-input"
+          value="Bite Me Forever."
+          maxlength="100"
+        >
+
+        <div class="font-previews">
+
+          <div class="font-preview-box">
+            <span>DISPLAY / CORMORANT</span>
+            <p id="preview-display"
+               class="type-display">
+              Bite Me Forever.
+            </p>
+          </div>
+
+          <div class="font-preview-box">
+            <span>DIGITAL / SPACE MONO</span>
+            <p id="preview-digital"
+               class="type-digital">
+              Bite Me Forever.
+            </p>
+          </div>
+
+          <div class="font-preview-box">
+            <span>BODY / DM SANS</span>
+            <p id="preview-body"
+               class="type-body-example">
+              Bite Me Forever.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY HIERARCHY -->
+
+    <section class="brand-window">
+      <div class="brand-window-bar">
+        <span>♡ hierarchy.txt</span>
+        <span>□ ×</span>
+      </div>
+
+      <div class="type-section">
+
+        <p class="type-label">
+          TYPOGRAPHY HIERARCHY
+        </p>
+
+        <div class="hierarchy-example">
+          <h2 class="type-display">
+            Not Your Average.
+          </h2>
+
+          <h3 class="type-digital">
+            HANDMADE WITH ATTITUDE
+          </h3>
+
+          <p class="type-body-example">
+            Jewelry for the unapologetically
+            individual. Made to be worn your way.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <a class="brand-next" href="visuals.html">
+      NEXT FILE: VISUALS.exe →
+    </a>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
