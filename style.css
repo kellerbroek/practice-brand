@@ -1,0 +1,156 @@
+
+/* BITE ME — BRAND IDENTITY */
+
+:root {
+  --pink: #e6a4cb;
+  --silver: #c8c8ce;
+  --black: #09080b;
+  --white: #f5f2f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  color: var(--white);
+  background: var(--black);
+}
+
+.homepage {
+  background-image: url("images/homepage.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.desktop {
+  min-height: 100vh;
+  position: relative;
+  padding: 7vh 6vw 80px;
+}
+
+/* WINDOWS-STYLE POPUP */
+
+.window {
+  width: min(420px, 100%);
+  background: #d9d5da;
+  color: #111;
+  border: 2px solid #fff;
+  outline: 2px solid #17121a;
+  box-shadow: 7px 7px 0 #000b;
+}
+
+.window-title {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg, #7d527b, #e6a4cb, #aaa5b4
+  );
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.window-content {
+  padding: 30px 25px;
+  text-align: center;
+}
+
+.window-content h1 {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(42px, 6vw, 65px);
+  margin: 0 0 16px;
+  text-shadow: 2px 2px var(--pink);
+}
+
+.window-content p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.subtext {
+  color: #795071;
+  font-size: 12px !important;
+}
+
+.enter-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 30px;
+  background: var(--black);
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.enter-button:hover {
+  background: var(--pink);
+  color: var(--black);
+  transform: translateY(-3px);
+}
+
+/* NAVIGATION */
+
+.desktop-nav {
+  position: absolute;
+  top: 45%;
+  left: 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.desktop-nav a {
+  width: fit-content;
+  color: white;
+  background: #09080bd9;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 2px solid var(--pink);
+}
+
+.desktop-nav a:hover {
+  color: var(--pink);
+  transform: translateX(5px);
+}
+
+/* TASKBAR */
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #151019ed;
+  border-top: 1px solid var(--silver);
+  padding: 13px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .desktop {
+    padding: 35px 20px 90px;
+  }
+
+  .desktop-nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 40px;
+  }
+
+  .taskbar {
+    font-size: 9px;
+  }
+}
