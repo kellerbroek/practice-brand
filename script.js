@@ -35,3 +35,60 @@ if (fontInput) {
     body.textContent = text;
   });
 }
+
+/* ===========================
+   VISUALS — IMAGE VIEWER
+   =========================== */
+
+const imageModal = document.getElementById("image-modal");
+const modalImage = document.getElementById("modal-image");
+const modalCaption = document.getElementById("modal-caption");
+const closeModal = document.getElementById("close-modal");
+
+if (imageModal && modalImage && closeModal) {
+  let previousFocus = null;
+
+  document.querySelectorAll(".visual-image-button")
+    .forEach(button => {
+
+      button.addEventListener("click", () => {
+        previousFocus = document.activeElement;
+
+        modalImage.src = button.dataset.image;
+        modalCaption.textContent =
+          button.dataset.caption;
+
+        imageModal.hidden = false;
+        document.body.style.overflow = "hidden";
+        closeModal.focus();
+      });
+    });
+
+  function hideImageModal() {
+    imageModal.hidden = true;
+    modalImage.removeAttribute("src");
+    document.body.style.overflow = "";
+    if (previousFocus) previousFocus.focus();
+  }
+
+  closeModal.addEventListener("click", hideImageModal);
+
+  imageModal.addEventListener("click", event => {
+    if (event.target === imageModal) {
+      hideImageModal();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (imageModal.hidden) return;
+
+    if (event.key === "Escape") {
+      hideImageModal();
+    }
+
+    if (event.key === "Tab") {
+      event.preventDefault();
+      closeModal.focus();
+    }
+  });
+}
