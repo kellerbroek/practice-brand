@@ -505,3 +505,173 @@ body {
     height: 110px;
   }
 }
+
+/* ===========================
+   TYPOGRAPHY.EXE
+   =========================== */
+
+.typography-page .type-section {
+  padding: 35px;
+}
+
+.type-label {
+  display: block;
+  color: #e6a4cb;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.type-display {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(42px, 7vw, 90px);
+  line-height: 1;
+  color: #f5f2f5;
+  margin: 25px 0;
+  overflow-wrap: anywhere;
+}
+
+.type-digital {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 48px);
+  letter-spacing: -2px;
+  color: #e6a4cb;
+  overflow-wrap: anywhere;
+}
+
+.type-body-heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.type-body-example {
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 650px;
+  overflow-wrap: anywhere;
+}
+
+.type-description {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #e6a4cb;
+}
+
+.type-section > p:not(.type-label) {
+  line-height: 1.8;
+}
+
+.type-alphabet {
+  margin-top: 35px;
+  padding: 25px;
+  background: #241c29;
+  border: 1px solid #795071;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  line-height: 1.8;
+}
+
+.display-alphabet {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.digital-alphabet {
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+}
+
+.body-alphabet {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+}
+
+/* FONT TESTER */
+
+.tester-title {
+  color: #e6a4cb;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+}
+
+.font-input {
+  display: block;
+  width: 100%;
+  margin: 15px 0 30px;
+  padding: 16px;
+  background: #09080b;
+  color: #f5f2f5;
+  border: 1px solid #e6a4cb;
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+}
+
+.font-input:focus {
+  outline: 2px solid #e6a4cb;
+  outline-offset: 3px;
+}
+
+.font-previews {
+  display: grid;
+  gap: 20px;
+}
+
+.font-preview-box {
+  padding: 25px;
+  background: #241c29;
+  border: 1px solid #795071;
+  min-width: 0;
+}
+
+.font-preview-box > span {
+  color: #e6a4cb;
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+}
+
+.font-preview-box .type-display {
+  font-size: clamp(32px, 5vw, 65px);
+}
+
+.font-preview-box .type-digital {
+  font-size: clamp(18px, 3vw, 32px);
+}
+
+/* HIERARCHY */
+
+.hierarchy-example {
+  background: #09080b;
+  border: 1px solid #795071;
+  padding: 35px;
+}
+
+.hierarchy-example .type-display {
+  font-size: clamp(40px, 6vw, 75px);
+}
+
+.hierarchy-example .type-digital {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .typography-page .type-section {
+    padding: 20px;
+  }
+
+  .type-alphabet {
+    padding: 15px;
+  }
+
+  .hierarchy-example {
+    padding: 20px;
+  }
+}
