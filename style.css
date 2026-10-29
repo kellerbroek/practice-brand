@@ -154,3 +154,196 @@ body {
     font-size: 9px;
   }
 }
+
+/* ===========================
+   BITE ME — BRAND PAGES
+   =========================== */
+
+.brand-page {
+  background:
+    radial-gradient(circle at 80% 10%,
+      #66365b55, transparent 40%),
+    #09080b;
+  color: #f5f2f5;
+  min-height: 100vh;
+  font-family: "Courier New", monospace;
+}
+
+.brand-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 22px 5%;
+  background: #151019;
+  border-bottom: 1px solid #e6a4cb;
+}
+
+.nav-logo {
+  color: #e6a4cb;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.brand-nav nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand-nav nav a {
+  color: #eee5ef;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.brand-nav nav a:hover {
+  color: #e6a4cb;
+}
+
+.brand-container {
+  width: min(1100px, 90%);
+  margin: 55px auto;
+}
+
+.file-label {
+  color: #e6a4cb;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.brand-heading {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(60px, 10vw, 125px);
+  margin: 20px 0;
+  letter-spacing: -3px;
+}
+
+.brand-heading span {
+  color: #e6a4cb;
+}
+
+.brand-subtitle {
+  color: #c4b6c6;
+  margin-bottom: 45px;
+}
+
+.brand-window {
+  border: 1px solid #c8b6c8;
+  background: #17121b;
+  margin-bottom: 35px;
+  box-shadow: 7px 7px 0 #4e2d4d;
+}
+
+.brand-window-bar {
+  background: linear-gradient(
+    90deg, #a86c9c, #ded0de
+  );
+  color: #100c13;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  padding: 35px;
+  align-items: center;
+}
+
+.about-logo {
+  background: white;
+  padding: 15px;
+}
+
+.about-logo img {
+  width: 100%;
+  display: block;
+}
+
+.about-description h2 {
+  color: #e6a4cb;
+}
+
+.about-description p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.highlight-pink {
+  color: #e6a4cb;
+  font-weight: bold;
+}
+
+.brand-traits {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.brand-traits div {
+  background: #281d2b;
+  border: 1px solid #a77a9e;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.brand-traits div:hover {
+  background: #e6a4cb;
+  color: black;
+}
+
+.brand-manifesto {
+  padding: 75px 15px;
+  text-align: center;
+}
+
+.brand-manifesto p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(25px, 5vw, 48px);
+  margin: 12px 0;
+}
+
+.brand-manifesto span {
+  display: block;
+  margin-top: 30px;
+  color: #e6a4cb;
+  font-size: 12px;
+}
+
+.brand-next {
+  display: inline-block;
+  padding: 15px 22px;
+  margin-bottom: 60px;
+  color: #e6a4cb;
+  border: 1px solid #e6a4cb;
+  text-decoration: none;
+}
+
+.brand-next:hover {
+  background: #e6a4cb;
+  color: #09080b;
+}
+
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .brand-traits {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+  }
+}
