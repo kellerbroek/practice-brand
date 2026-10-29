@@ -1,0 +1,20 @@
+
+/* ===========================
+   TYPOGRAPHY FONT TESTER
+   =========================== */
+
+const fontInput = document.getElementById("font-input");
+
+if (fontInput) {
+  const display = document.getElementById("preview-display");
+  const digital = document.getElementById("preview-digital");
+  const body = document.getElementById("preview-body");
+
+  fontInput.addEventListener("input", () => {
+    const text = fontInput.value;
+
+    display.textContent = text;
+    digital.textContent = text;
+    body.textContent = text;
+  });
+}
